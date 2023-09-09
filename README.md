@@ -46,5 +46,25 @@ This repository serves as a comprehensive guide, featuring tutorials and example
 This was all about basic concept of git and commands !
 
 
+============ Advance =============
+1) Git command used to update your local repository with changes from a remote repository.
+   command == >> git pull
+   The general syntax for using git pull is:
+   git pull <remote> <branch>
+   This command contacts the remote repository and downloads any new changes (commits, branches, tags) from the remote repository to your local repository. It does not, 
+   however, make any changes to your working directory or merge these changes into your current branch.
+     command == >> git fetch:
+
+  After fetching the changes, Git attempts to merge the changes from the remote branch into your current local branch, creating a new merge commit if necessary. If there are 
+  conflicts between your local changes and the remote changes, Git will prompt you to resolve them.
+   command == >> git merge
+
+^^^^^^ Branch^^^^^^^^^
+1) To create new branch use following command
+   git checkout -b name_of_branch
+3) git branch this command used to list the total branches
+4) The git branch -v command is used to list all the branches in your Git repository along with additional information, including the latest commit on each branch. The -v flag stands       for "verbose" and provides more details about each branch. 
+  git branch -v
+
      
 
