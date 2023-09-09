@@ -65,6 +65,36 @@ This was all about basic concept of git and commands !
 3) git branch this command used to list the total branches
 4) The git branch -v command is used to list all the branches in your Git repository along with additional information, including the latest commit on each branch. The -v flag stands       for "verbose" and provides more details about each branch. 
   git branch -v
+It seems like you have several topics related to Git version control. I'll provide a brief overview of each of these topics:
 
+Git Rebase:
+
+1) Git rebase: is a command used to reorganize and clean up the commit history in a Git repository.
+  It can be used to incorporate changes from one branch into another, making it appear as if you had made a linear sequence of commits.
+  Rebase is often used to maintain a clean and linear commit history, especially before merging feature branches into the main branch.
+  Recover Deleted Branch That Was Not Merged:
+
+2) git reflog command: If a branch was deleted but not merged, you can potentially recover it using the git reflog command to find the SHA-1 hash of the commit at the tip of the deleted branch. Once you have the commit hash, you can recreate the branch using
+ git branch <branch-name> <commit-hash>.
+
+Reverting and Resetting:
+  git revert is used to create a new commit that undoes the changes made in a previous commit, preserving the commit history.
+  git reset is used to reset the current branch to a specific commit, which can be either "soft" (preserving changes in the staging 
+  area), "mixed" (unstaging changes but preserving them in your working directory), or "hard" (discarding all changes).
+3) Git Cherry-Pick:
+  git cherry-pick allows you to apply a specific commit from one branch to another.
+  It's useful when you want to pick and apply specific changes from one branch to another without merging the entire branch.
+  Difference Between Fork, Branch, and Clone:
+
+A fork is a copy of a repository on a Git hosting service like GitHub. It allows you to work on your copy of a repository independently of the original.
+A branch is a separate line of development within a repository. You can create branches to work on new features or bug fixes.
+A clone is a copy of a Git repository, including all of its history and branches. Cloning creates a local copy of a remote repository on your machine.
+Squash the Last N Commits into a Single Commit:
+
+You can use git rebase -i HEAD~N to interactively rebase the last N commits. During the interactive rebase, you can mark commits as "squash" or "fixup" to combine them into a single commit.
+How to Avoid a Detached Head:
+
+A detached head state occurs when you check out a specific commit instead of a branch. To avoid this, always make sure to check out a branch name instead of a commit hash. If you want to work on a specific commit, create a new branch at that commit using git checkout -b <branch-name> <commit-hash>.
+These are the basic concepts related to your Git-related topics. If you have specific questions or need more detailed information about any of these topics, please feel free to ask.
      
 
