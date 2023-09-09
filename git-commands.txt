@@ -1,0 +1,18 @@
+git config --global user.email "parkash.official1308@gmail.com"
+
+git config --global user.name "Parkash1308"
+
+initializes a new Git repository in the current directory, allowing version control for files and tracking changes. command == >> git init
+
+git status shows the current state of the Git repository, displaying modified, untracked, and committed files, aiding in tracking changes. command == >> git status
+
+git add stages changes for the next commit. You can add files individually (git add filename) or a folder (git add foldername). For adding multiple files, you can:
+
+Add All Modified Files:==>> git add -u
+Add All Files: ==>> git add .
+Add Specific Files: ==>> git add file1.txt file2.txt
+git commit records staged changes with a descriptive message, creating a new snapshot in the version history of the Git repository. git commit -m "descriptive message"
+
+connects a remote repository to local Git repository using a convenient alias. command == >> git remote add name url
+
+To set remote repository as up-stream branch for current local branch , it means that Git will remember the relationship between the local branch and the remote branch, making future git push and git pull commands more convenient. command == >> git push --set-upstream name master
